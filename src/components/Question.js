@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import { handleQuestionAnswer } from '../actions/questions'
 
-import CanvasJSReact from '../chart/canvasjs.react';
 import { ProgressBar, Button, container } from 'react-bootstrap';
 
 class Question extends Component {
@@ -100,7 +99,7 @@ class Question extends Component {
 
         if (this.props.answered === false) {
             return (
-                <div style={{ width: "60%", margin: "auto" }}>
+                <div style={{ width: "60%", margin: "auto", marginTop: "30px" }}>
                     <div className='question'>
                         {
                             Object.keys(this.props.users).map((key) => {

@@ -1,13 +1,222 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: sans-serif;
+  color: #252525;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: #252525;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.btn {
+  text-transform: uppercase;
+  margin: 35px auto;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,.29);
+  cursor: pointer;
+  background: #fff;
+  font-size: 16px;
+  width: 250px;
+  position: relative;
+}
+
+.btn:hover {
+  border-color: rgba(0,0,0,.5);
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: 0;
+  font-weight: 700;
+  border-width: 2px;
+}
+
+.center {
+  text-align: center;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.nav li:first-child {
+  padding-left: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.avatar {
+  height: 100px;
+  border-radius: 25px;
+  margin: 10px;
+}
+.loginWrapper{
+  height:100vh;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login{
+  border: 1px solid #e5e5e5;
+  padding: 35px;
+  width: 70%;
+}
+.login h1{
+  font-size:1.8rem;
+}
+.login select{
+  width: 80%;
+    padding: 7px;
+}
+.topBar{
+  display: flex;
+  background-color: #ededed;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 30px;
+}
+.topBar .nav{
+  flex : 2;
+}
+ul, p{
+  margin-bottom: 0;
+}
+#name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#name img{
+  width:65px;
+  height: 65px;
+  padding-left: 5px;
+}
+.questions-wrapper,.resultSection{
+  width: 60%;
+  margin: auto;
+  border: 1px solid #efefef;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+.dashboard-list{
+  display: flex;
+  flex-direction: column;
+}
+.question{
+  display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border: 1px solid #efefef;
+    background: #efefef;
+}
+.askedBy h2{
+  font-weight: 500;
+  font-size:1.3rem!important;
+}
+.askedBy img{
+  height:100px;
+}
+.dashboard-list li{
+  margin: 20px;
+    border: 1px solid #efefef;
+    background: #efefef;
+}
+.question-section{
+  padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+button{
+  background-color: #eecb0b;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 3px;
+    font-weight: 600;
+    display: block;
+    width: 170px;
+    text-align: center;
+    margin: auto;
+}
+.react-tabs__tab-list {
+  border-bottom: 1px solid #eecb0b;
+}
+.react-tabs__tab {
+  width: 50%;
+  border: none;
+  cursor: pointer;
+
+    font-weight:600;
+}
+.react-tabs__tab--selected{
+  background-color: #eecb0b!important;
+    color: #fff!important;
+
+}
+#react-tabs-0{
+  border-radius: 5px 0 0 0;
+}
+#react-tabs-1{
+  border-radius: 0px 5px 0 0;
+}
+.optionOne .progress-bar{
+  width: 50%;
+    background-color: #27d496;
+}
+.optionTwo .progress-bar{
+  width: 50%;
+    background-color: #8408cd;
+}
+.progress{
+  height:2rem;
+}
+.yourVote{
+  font-weight:600;
+  color:red
+}
+.newQuestion{
+  font-size: 1.5rem;
+  padding: 10px 0;
+  background-color: #efefef;
+}
+.newQATitle{
+  font-size: 1.3rem;
+    font-weight: 600;
+}
+.newQAForm textarea{
+  width: 80%;
+}
+.leader-wrapper {
+  width: 60%;
+  margin: auto;
+  background-color: #efefef;
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 20px;
 }

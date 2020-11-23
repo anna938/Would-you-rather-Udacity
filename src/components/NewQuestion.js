@@ -78,7 +78,7 @@ class NewQuestion extends Component {
                     <br />
 
                     <button
-                        className=''
+                        style={{ margin: "20px auto" }}
                         type='submit'
                         disabled={optionOne === '' || optionTwo === ''}>
                         Submit

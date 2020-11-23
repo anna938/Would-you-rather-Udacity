@@ -10,7 +10,7 @@ import Login from "./Login"
 import Logout from "./Logout"
 import Question from "./Question"
 import Leaderboard from "./LeaderBoard"
-import Result from "./Result"
+
 
 class App extends Component {
   componentDidMount() {
@@ -29,7 +29,7 @@ class App extends Component {
                 <div className="topBar">
                   <Navbar />
                   <div id="name">
-                    <p>Hello {this.props.user.name}</p>
+                    <p>Hello, {this.props.user.name}</p>
                     <img src={this.props.user.avatarURL} />
                   </div>
                 </div>
@@ -39,7 +39,7 @@ class App extends Component {
                 <Route path='/logout' exact component={Logout} />
                 <Route path='/question/:id' component={Question} />
                 <Route path='/leaderboard' component={Leaderboard} />
-                <Route path='/result:id' component={Result} />
+
               </div>
             }
 
