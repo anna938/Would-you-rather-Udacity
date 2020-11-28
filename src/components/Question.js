@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
 import { handleQuestionAnswer } from '../actions/questions'
 
-import { ProgressBar, Button, container } from 'react-bootstrap';
+import { ProgressBar } from 'react-bootstrap';
 
 class Question extends Component {
     state = {
@@ -39,7 +38,7 @@ class Question extends Component {
 
     render() {
         const {
-            author, id, optionOne, optionTwo, timestamp, name
+            author, optionOne, optionTwo, name
         } = this.props.question;
         const { selectedOption } = this.state;
         console.log(this.props.answered);
@@ -62,7 +61,7 @@ class Question extends Component {
                                 if (this.props.users[key].id === author) {
                                     return <div className="askedBy" key={key}>
                                         <h2>Asked By: {this.props.users[key].name}</h2>
-                                        <img src={`${this.props.users[key].avatarURL}`} key={key} className="avatar" />
+                                        <img src={`${this.props.users[key].avatarURL}`} key={key} className="avatar" alt="avatar" />
 
                                     </div>
                                 }
@@ -107,7 +106,7 @@ class Question extends Component {
                                     return (
                                         <div className="askedBy" key={key}>
                                             <h2>{this.props.users[key].name} asks:</h2>
-                                            <img src={`${this.props.users[key].avatarURL}`} className="avatar" />
+                                            <img src={`${this.props.users[key].avatarURL}`} className="avatar" alt="avatar" />
                                         </div>
                                     )
                                 }
