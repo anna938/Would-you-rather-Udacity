@@ -20,15 +20,14 @@ class QuestionContainer extends Component {
             <div className='question'>
                 {
                     Object.keys(users).map((key) => {
-                        if (users[key].id === question.author) {
+                        if (users[key].id !== question.author) return null;
                             return (
                                 <div className="askedBy" key={key}>
                                     <h2>{users[key].name} asks:</h2>
                                     <img src={`${users[key].avatarURL}`} className="avatar" alt="avatar" />
                                 </div>
                             )
-                        }
-                        return;
+                        
                     })
 
                 }
