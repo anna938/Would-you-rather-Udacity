@@ -58,15 +58,15 @@ class Question extends Component {
 
                         {
                             Object.keys(this.props.users).map((key, index) => {
-                                if (this.props.users[key].id === author) {
-                                    return <div className="askedBy" key={key}>
+                                if (this.props.users[key].id !== author) return null;
+                                    return (
+                                        <div className="askedBy" key={key}>
                                         <h2>Asked By: {this.props.users[key].name}</h2>
                                         <img src={`${this.props.users[key].avatarURL}`} key={key} className="avatar" alt="avatar" />
 
                                     </div>
-                                }
-                                return;
-                            })
+                                    )
+                               })
 
 
                         }
@@ -103,15 +103,14 @@ class Question extends Component {
                     <div className='question'>
                         {
                             Object.keys(this.props.users).map((key) => {
-                                if (this.props.users[key].id === author) {
+                                if (this.props.users[key].id !== author) return null;
                                     return (
                                         <div className="askedBy" key={key}>
                                             <h2>{this.props.users[key].name} asks:</h2>
                                             <img src={`${this.props.users[key].avatarURL}`} className="avatar" alt="avatar" />
                                         </div>
                                     )
-                                }
-                                return;
+                                
                             })
 
                         }
