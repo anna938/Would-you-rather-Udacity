@@ -65,6 +65,7 @@ class Question extends Component {
 
                                     </div>
                                 }
+                                return;
                             })
 
 
@@ -110,6 +111,7 @@ class Question extends Component {
                                         </div>
                                     )
                                 }
+                                return;
                             })
 
                         }
