@@ -24,10 +24,11 @@ class QuestionContainer extends Component {
                             return (
                                 <div className="askedBy" key={key}>
                                     <h2>{users[key].name} asks:</h2>
-                                    <img src={`${users[key].avatarURL}`} className="avatar" />
+                                    <img src={`${users[key].avatarURL}`} className="avatar" alt="avatar" />
                                 </div>
                             )
                         }
+                        return;
                     })
 
                 }
