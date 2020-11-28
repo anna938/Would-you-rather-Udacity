@@ -12,7 +12,7 @@ class LeaderboardBox extends Component {
 
                     <div className="leader">
                         <h2>{this.props.name} asks:</h2>
-                        <img src={`${this.props.avatar}`} className="avatar" />
+                        <img src={`${this.props.avatar}`} className="avatar" alt="avatar" />
                     </div>
                     <div className="score-section">
                         <strong>Total questions asked: </strong>{this.props.question}
