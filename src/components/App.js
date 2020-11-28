@@ -30,7 +30,7 @@ class App extends Component {
                   <Navbar />
                   <div id="name">
                     <p>Hello, {this.props.user.name}</p>
-                    <img src={this.props.user.avatarURL} />
+                    <img src={this.props.user.avatarURL} alt="avatar" />
                   </div>
                 </div>
 
